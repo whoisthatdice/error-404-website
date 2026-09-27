@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - 404 Error</title>
+  <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAADNonsA5MmZAP369gDZrmEA6dKpANCogwDcuXwAzZUsANKcMQDTsI4AyZAqANm8ngDBhCMA0Z03ANWykQDQmi8A8+TKANq+oQD+/PoAzZUtAMyZQwDHjSMAwIEcAMOHJADbvqIA0JkrAM6YLgD9+/YA16pOAMaMJwDEiCIAy5AkAM+ngQDPmjoAx40lANq0dQDChSMA0JsvAM6lfwDgwpAA1rWUANGrhwDKkB0AzJc7APz59QDFiiYA17eXANKtigDJjiMA37x4ANiqUADQmzAA79/DANi5mgD48eMA+fHjANm7nQDMlSkAzJQsAM2ULADgvnwAxoslAMqSKgDNpHwA////AMKGIwDRnC8A9enSAM6XLQDLkisAwoYkANGcMAD69esAy5EmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD9AQEBAQEBAQEBAQEBAQD8mQAwMDAwMDAwMDAwMDEAmIEBGRkZGJEEWRkZGRkZAIAVAFxcXFxcsJxcXFxcXQAUpQC0tLS0eIxQtLS0tLUApL0AdHR0dPQYrHR0dHR1ALwlACgoKCiI0ARUKCgoKQAkOQEVFRUU+ITYEMEVFRUAOKEATEztJHwc6EgMTExNAKC5AGhpEPBAqOQIxGhoaQC41QA8PDw03SBtDDw8PD0A1OEBHR0clQjIcGTNHR0dAOAtACAgICAgICAgICAgIQAsRQEBAQEBAQEBAQEBAQEARGBgYGBgYGBgYGBgYGBgYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" rel="icon" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 550px;
+            width: 100%;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
+            line-height: 1;
+            color: #3b82f6;
+            margin-bottom: 10px;
+            letter-spacing: -0.05em;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .error-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #0f172a;
+        }
+
+        .error-message {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .home-button {
+            display: inline-block;
+            background-color: #3b82f6;
+            color: #ffffff;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
+        }
+
+        .home-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-1px);
+        }
+
+        .home-button:active {
+            transform: translateY(1px);
+        }
+
+        .redirect-text {
+            margin-top: 25px;
+            font-size: 0.875rem;
+            color: #94a3b8;
+        }
+
+        .countdown {
+            font-weight: 600;
+            color: #64748b;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @media (max-width: 480px) {
+            .error-code { font-size: 6rem; }
+            .error-title { font-size: 1.5rem; }
+            .error-message { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Oops! Page not found</h1>
+        <p class="error-message">
+            The page you are looking for might have been removed, had its name changed, or is temporarily unavailable. 
+        </p>
+        
+        <a href="/" class="home-button">Return to Homepage</a>
+        
+        <p class="redirect-text">
+            Taking you home automatically in <span id="countdown" class="countdown">15</span> seconds...
+        </p>
+    </div>
+
+    <script>
+        // Automatic redirection countdown
+        let timeLeft = 15;
+        const countdownElement = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                window.location.href = '/'; // Change to your specific URL if needed
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
