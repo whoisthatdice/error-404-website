@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Studio - Homepage</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Header */
+        header {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #3b82f6;
+            text-decoration: none;
+            letter-spacing: -0.05em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #3b82f6;
+        }
+
+        /* Main Core Container */
+        .wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            text-align: center;
+        }
+
+        .hero-section {
+            max-width: 600px;
+            margin-bottom: 60px;
+        }
+
+        /* Elements directly matching your 404 layout */
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
+            line-height: 1;
+            color: #3b82f6;
+            margin-bottom: 10px;
+            letter-spacing: -0.05em;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .error-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: #0f172a;
+            letter-spacing: -0.02em;
+        }
+
+        .error-message {
+            font-size: 1.15rem;
+            color: #64748b;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* Interactive Buttons */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .action-button {
+            display: inline-block;
+            background-color: #3b82f6;
+            color: #ffffff;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+
+        .action-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-1px);
+        }
+
+        .action-button.secondary {
+            background-color: transparent;
+            color: #475569;
+            border: 2px solid #cbd5e1;
+            box-shadow: none;
+        }
+
+        .action-button.secondary:hover {
+            background-color: #f1f5f9;
+            border-color: #94a3b8;
+        }
+
+        /* Clever Grid Content Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            width: 100%;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-icon {
+            font-size: 1.5rem;
+            color: #3b82f6;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Floating keyframe from your original file */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @media (max-width: 768px) {
+            .error-code { font-size: 6rem; }
+            .error-title { font-size: 2rem; }
+            header { padding: 10px 0; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">HTTP // 404</a>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#templates">Templates</a></li>
+            <li><a href="#docs">Documentation</a></li>
+        </ul>
+    </header>
+
+    <div class="wrapper">
+        <main class="hero-section">
+            <div class="error-code">404</div>
+            <h1 class="error-title">Welcome to the Lost Web</h1>
+            <p class="error-message">
+                We design sites so clean, you will think your server is down. Explore our error-driven design layouts, minimal micro-copy frameworks, and automated layout systems.
+            </p>
+            
+            <div class="btn-group">
+                <a href="#features" class="action-button">Explore Framework</a>
+                <button class="action-button secondary" onclick="alert('System Status: 100% Operational')">Run System Diagnostics</button>
+            </div>
+        </main>
+
+        <!-- Homepage Content Layout -->
+        <section id="features" class="features-grid">
+            <div class="card">
+                <div class="card-icon">[!]</div>
+                <h2 class="card-title">Brutal Minimalism</h2>
+                <p class="card-text">Strip away the visual noise. Keep layout weights identical to default browser error frameworks for lightning-fast delivery.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">{ }</div>
+                <h2 class="card-title">Smart Redirection</h2>
+                <p class="card-text">Includes baked-in countdown behaviors to make sure users seamlessly cycle exactly to where they need to go next.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">&lt;/&gt;</div>
+                <h2 class="card-title">Zero Dependency CSS</h2>
+                <p class="card-text">Pure vanilla implementation with zero external asset overheads. No bloated frameworks needed to render beautifully.</p>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
